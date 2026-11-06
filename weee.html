@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Technic Tutorials</title>
+    <meta
+      name="description"
+      content="Student-built technology projects, detailed tutorials, and a positive school-supported community."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="root" tabindex="-1">
+      <div class="app-shell">
+        <header class="site-header">
+          <a class="brand" aria-label="Technic Tutorials home" href="/"
+            ><span class="brand-mark"><span>TT</span></span
+            ><span><strong>Technic</strong><small>Tutorials</small></span></a
+          >
+          <nav aria-label="Main navigation">
+            <a class="active" href="#discover">Discover</a><a href="#about">How it works</a
+            ><a href="#community">Community</a>
+          </nav>
+          <div class="header-actions">
+            <button class="ghost-button">Sign in</button
+            ><button class="primary-button compact">
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 5v14M5 12h14"></path>
+              </svg>
+              Share a project
+            </button>
+          </div>
+        </header>
+        <main>
+          <section class="hero">
+            <div class="hero-grid"></div>
+            <div class="hero-content">
+              <div class="eyebrow">
+                <svg
+                  aria-hidden="true"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="m12 3-1.4 4.2a5 5 0 0 1-3.2 3.2L3 12l4.4 1.6a5 5 0 0 1 3.2 3.2L12 21l1.4-4.2a5 5 0 0 1 3.2-3.2L21 12l-4.4-1.6a5 5 0 0 1-3.2-3.2L12 3Z"
+                  ></path>
+                </svg>
+                Built by students, for students
+              </div>
+              <h1>Build something.<br /><em>Share everything.</em></h1>
+              <p>
+                Explore real projects from student creators. Follow their process, learn new skills,
+                and turn your next idea into something remarkable.
+              </p>
+              <form class="hero-search">
+                <svg
+                  aria-hidden="true"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="m20 20-4-4"></path></svg
+                ><input
+                  placeholder="Search projects, skills, or creators…"
+                  aria-label="Search projects"
+                /><button type="submit">Explore</button>
+              </form>
+              <div class="popular-searches">
+                <span>Popular:</span> Arduino <i></i> Web design <i></i> Python <i></i> 3D printing
+              </div>
+            </div>
+            <div class="hero-stat stat-one">
+              <strong>0<!-- -->+</strong><span>student builds</span>
+            </div>
+            <div class="hero-stat stat-two"><strong>0</strong><span>skills explored</span></div>
+          </section>
+          <section class="trust-strip" aria-label="Community values">
+            <div>
+              <svg
+                aria-hidden="true"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path></svg
+              ><span
+                ><strong>Faculty supported</strong
+                ><small>A safe, school-approved space</small></span
+              >
+            </div>
+            <div>
+              <svg
+                aria-hidden="true"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="m12 3-1.4 4.2a5 5 0 0 1-3.2 3.2L3 12l4.4 1.6a5 5 0 0 1 3.2 3.2L12 21l1.4-4.2a5 5 0 0 1 3.2-3.2L21 12l-4.4-1.6a5 5 0 0 1-3.2-3.2L12 3Z"
+                ></path></svg
+              ><span
+                ><strong>Real student work</strong
+                ><small>Honest process, useful details</small></span
+              >
+            </div>
+            <div>
+              <svg
+                aria-hidden="true"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6l1.2 1.2L12 21l7.6-7.6a5.4 5.4 0 0 0 1.2-8.8Z"
+                ></path></svg
+              ><span
+                ><strong>Positive by design</strong
+                ><small>Encouragement over competition</small></span
+              >
+            </div>
+          </section>
+          <section class="discover-section" id="discover">
+            <div class="section-heading">
+              <div>
+                <span class="kicker">Explore the community</span>
+                <h2>Projects worth opening</h2>
+              </div>
+              <p>From first prototypes to polished builds, every project has something to teach.</p>
+            </div>
+            <div class="filter-bar">
+              <div class="category-tabs" role="group" aria-label="Project categories">
+                <button class="selected">All projects</button><button>Robotics</button
+                ><button>Web &amp; Apps</button><button>Electronics</button
+                ><button>Creative Tech</button>
+              </div>
+              <label class="sort-select"
+                >Sort by<select>
+                  <option selected>Trending</option>
+                  <option>Newest</option>
+                  <option>Most discussed</option>
+                </select></label
+              >
+            </div>
+            <div class="empty-state">
+              <svg
+                aria-hidden="true"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="m20 20-4-4"></path>
+              </svg>
+              <h3>No projects found</h3>
+              <p>Try a different keyword or category.</p>
+              <button>Clear filters</button>
+            </div>
+          </section>
+          <section class="how-section" id="about">
+            <div class="how-copy">
+              <span class="kicker">A blueprint, not just a highlight</span>
+              <h2>Learn from the whole process.</h2>
+              <p>
+                Great ideas should be shared. Technic Tutorials gives student makers the space to
+                document what worked, what failed, and exactly how someone else can begin.
+              </p>
+              <button class="text-link">
+                Share what you know
+                <svg
+                  aria-hidden="true"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="steps-list">
+              <div>
+                <span>01</span>
+                <section>
+                  <h3>Document your build</h3>
+                  <p>Add an overview, images, tags, and clear replication steps.</p>
+                </section>
+              </div>
+              <div>
+                <span>02</span>
+                <section>
+                  <h3>Faculty review</h3>
+                  <p>Every submission is checked before it becomes visible to the community.</p>
+                </section>
+              </div>
+              <div>
+                <span>03</span>
+                <section>
+                  <h3>Inspire the next idea</h3>
+                  <p>Answer questions and help another creator build on your work.</p>
+                </section>
+              </div>
+            </div>
+          </section>
+          <section class="community-banner" id="community">
+            <div>
+              <span class="eyebrow light">Deep Run HS · Center for Information Technology</span>
+              <h2>Your idea belongs here.</h2>
+              <p>
+                Join a community of curious people who build, learn, and help each other move
+                forward.
+              </p>
+            </div>
+            <button>
+              Post your first project
+              <svg
+                aria-hidden="true"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </button>
+          </section>
+        </main>
+        <footer>
+          <a class="brand footer-brand" aria-label="Technic Tutorials home" href="/"
+            ><span class="brand-mark"><span>TT</span></span
+            ><span><strong>Technic</strong><small>Tutorials</small></span></a
+          >
+          <p>A student project-sharing platform for the Deep Run High School community.</p>
+          <div>
+            <a href="#discover">Discover</a><a href="#about">Guidelines</a
+            ><a href="/admin">Faculty</a>
+          </div>
+          <small>Student-built. School-supported. Positive by design.</small>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      const staticMessage =
+        'This is the static HTML version of Technic Tutorials. Sign-in and project posting are not available.'
+
+      function showStaticNotice() {
+        const backdrop = document.createElement('div')
+        backdrop.className = 'modal-backdrop'
+        backdrop.innerHTML = `
+      <section class="create-modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="static-notice-title">
+        <button class="modal-close" type="button" aria-label="Close">×</button>
+        <div class="create-heading">
+          <span class="kicker">Static site</span>
+          <h2 id="static-notice-title">Design preview only.</h2>
+          <p>${staticMessage}</p>
+        </div>
+        <button class="primary-button full-button" type="button">Got it</button>
+      </section>`
+        const close = () => backdrop.remove()
+        backdrop.addEventListener('click', (event) => {
+          if (event.target === backdrop) close()
+        })
+        backdrop
+          .querySelectorAll('button')
+          .forEach((button) => button.addEventListener('click', close))
+        document.body.append(backdrop)
+        backdrop.querySelector('.modal-close').focus()
+      }
+
+      document
+        .querySelectorAll(
+          '.ghost-button, .primary-button.compact, .text-link, .community-banner button',
+        )
+        .forEach((button) => button.addEventListener('click', showStaticNotice))
+
+      const searchForm = document.querySelector('.hero-search')
+      const searchInput = searchForm.querySelector('input')
+      const emptyText = document.querySelector('.empty-state p')
+      searchForm.addEventListener('submit', (event) => {
+        event.preventDefault()
+        const query = searchInput.value.trim()
+        emptyText.textContent = query
+          ? `No static projects match “${query}”.`
+          : 'Try a different keyword or category.'
+        document.querySelector('#discover').scrollIntoView({ behavior: 'smooth' })
+      })
+
+      document.querySelectorAll('.category-tabs button').forEach((button) => {
+        button.addEventListener('click', () => {
+          document.querySelector('.category-tabs .selected').classList.remove('selected')
+          button.classList.add('selected')
+          emptyText.textContent =
+            button.textContent === 'All projects'
+              ? 'Try a different keyword or category.'
+              : `No static ${button.textContent.toLowerCase()} projects are available.`
+        })
+      })
+
+      document.querySelector('.empty-state button').addEventListener('click', () => {
+        searchInput.value = ''
+        document.querySelector('.category-tabs .selected').classList.remove('selected')
+        document.querySelector('.category-tabs button').classList.add('selected')
+        emptyText.textContent = 'Try a different keyword or category.'
+      })
+    </script>
+  </body>
+</html>
