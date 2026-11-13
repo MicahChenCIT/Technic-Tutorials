@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share a project · Technic Tutorials</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-protected>
+<header class="topbar">
+  <nav aria-label="Main">
+    <a class="brand" href="explore.html">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#13294B"/><path d="M12 10l-5 6 5 6M20 10l5 6-5 6" fill="none" stroke="#A7C7E7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Technic Tutorials
+    </a>
+    <div class="nav-tabs">
+      <a class="nav-tab" href="explore.html">Explore</a>
+      <a class="nav-tab" href="profile.html">My projects</a>
+      <a class="nav-tab" href="settings.html">Settings</a>
+    </div>
+    <a class="btn btn-primary is-pressed" aria-current="page" href="create.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      New project
+    </a>
+    <a class="avatar nav-avatar" href="profile.html" aria-label="Your profile" data-user-initials>JS</a>
+  </nav>
+</header>
+
+<main class="container page">
+  <div class="stack gap-6">
+    <h1 class="page-title">Share a project</h1>
+    <p class="muted">Fields marked <span class="req">*</span> are required.</p>
+  </div>
+
+  <div class="two-col">
+    <form class="col-main stack gap-20" id="create-form" novalidate>
+
+      <!-- 01 The basics -->
+      <section class="card pad stack gap-18">
+        <h2 class="sec-title"><span class="sec-num" aria-hidden="true">01</span>The basics</h2>
+        <div class="field">
+          <label class="label" style="font-size:16px" for="c-title">Project title <span class="req">*</span></label>
+          <input class="input" id="c-title" type="text" placeholder="e.g. Line-following robot" style="min-height:48px;font-size:17px">
+        </div>
+        <div class="field">
+          <label class="label" style="font-size:16px" for="c-ov">Overview <span class="req">*</span></label>
+          <textarea class="textarea" id="c-ov" rows="3" maxlength="200" placeholder="One or two sentences: what it is and what makes it cool. Shown on project cards."></textarea>
+          <div class="row between helper"><span>Appears on the Explore feed and in search.</span><span class="mono" id="ov-count" aria-live="polite" style="letter-spacing:0">0 / 200</span></div>
+        </div>
+      </section>
+
+      <!-- 02 Photos -->
+      <section class="card pad stack gap-16">
+        <div class="row wrap between gap-12" style="align-items:baseline">
+          <h2 class="sec-title"><span class="sec-num" aria-hidden="true">02</span>Photos</h2>
+          <span class="small muted" id="photo-count">3 of 10 · the first photo is the cover</span>
+        </div>
+        <div class="photo-grid" id="photo-grid">
+          <button type="button" class="add-tile" id="add-photo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            Add photos
+          </button>
+        </div>
+      </section>
+
+      <!-- 03 Description -->
+      <section class="card pad stack gap-12">
+        <h2 class="sec-title"><span class="sec-num" aria-hidden="true">03</span>Description <span class="req" style="font-size:16px">*</span></h2>
+        <div class="editor">
+          <div class="toolbar" role="toolbar" aria-label="Formatting">
+            <button type="button" class="tool" data-fmt="bold" aria-label="Bold" style="font-weight:700">B</button>
+            <button type="button" class="tool" data-fmt="italic" aria-label="Italic" style="font-style:italic">I</button>
+            <button type="button" class="tool" data-fmt="heading" aria-label="Heading" style="font-weight:600">H</button>
+            <button type="button" class="tool" data-fmt="list" aria-label="Bulleted list"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></button>
+            <button type="button" class="tool" data-fmt="code" aria-label="Code block"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"/></svg></button>
+            <button type="button" class="tool" data-fmt="link" aria-label="Link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></button>
+          </div>
+          <label for="c-desc" class="sr-only">Description</label>
+          <textarea id="c-desc" rows="7" placeholder="Why you built it, what it does, what you’d need to make one, and anything you learned along the way."></textarea>
+        </div>
+      </section>
+
+      <!-- 04 Build steps -->
+      <section class="card pad stack gap-16">
+        <div class="row wrap between gap-12">
+          <h2 class="sec-title"><span class="sec-num" aria-hidden="true">04</span>Build steps <span class="small muted" style="font-family:var(--font-body);font-weight:500;letter-spacing:0">optional</span></h2>
+          <label class="check" style="font-weight:500"><input type="checkbox" id="steps-toggle" checked>Include step-by-step instructions</label>
+        </div>
+        <div class="stack gap-12" id="steps-wrap">
+          <div class="stack gap-12" id="step-list">
+            <div class="step-edit">
+              <span class="step-num">01</span>
+              <div class="stack gap-10" style="flex:1 1 auto;min-width:0">
+                <input class="input" type="text" value="Print the parts" aria-label="Step title" style="min-height:44px;font-weight:600">
+                <textarea class="textarea" rows="2" aria-label="Step instructions">Print the chassis and wheel hubs in PLA at 20% infill. Supports only for the sensor mount.</textarea>
+                <div class="row wrap gap-12">
+                  <button type="button" class="dashed-btn" data-step-image>+ Add image to step</button>
+                  <button type="button" class="btn btn-ghost" data-remove-step>Remove step</button>
+                </div>
+              </div>
+            </div>
+            <div class="step-edit">
+              <span class="step-num">02</span>
+              <div class="stack gap-10" style="flex:1 1 auto;min-width:0">
+                <input class="input" type="text" placeholder="Step title" aria-label="Step title" style="min-height:44px;font-weight:600">
+                <textarea class="textarea" rows="2" placeholder="What to do in this step" aria-label="Step instructions"></textarea>
+                <div class="row wrap gap-12">
+                  <button type="button" class="dashed-btn" data-step-image>+ Add image to step</button>
+                  <button type="button" class="btn btn-ghost" data-remove-step>Remove step</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-outline" id="add-step" style="align-self:flex-start">+ Add step</button>
+        </div>
+        <template id="step-template">
+          <div class="step-edit">
+            <span class="step-num">00</span>
+            <div class="stack gap-10" style="flex:1 1 auto;min-width:0">
+              <input class="input" type="text" placeholder="Step title" aria-label="Step title" style="min-height:44px;font-weight:600">
+              <textarea class="textarea" rows="2" placeholder="What to do in this step" aria-label="Step instructions"></textarea>
+              <div class="row wrap gap-12">
+                <button type="button" class="dashed-btn" data-step-image>+ Add image to step</button>
+                <button type="button" class="btn btn-ghost" data-remove-step>Remove step</button>
+              </div>
+            </div>
+          </div>
+        </template>
+      </section>
+
+      <!-- 05 Tags -->
+      <section class="card pad stack gap-12">
+        <h2 class="sec-title"><span class="sec-num" aria-hidden="true">05</span>Tags <span class="req" style="font-size:16px">*</span></h2>
+        <label for="c-tags" class="small muted">Add at least one tag so people can find your project. Press Enter to add.</label>
+        <div class="tag-input" id="tag-box">
+          <input id="c-tags" type="text" placeholder="Type a tag…">
+        </div>
+        <div class="row wrap gap-8 small">
+          <span class="muted">Popular:</span>
+          <button type="button" class="chip" data-add-tag="Electronics">+ Electronics</button>
+          <button type="button" class="chip" data-add-tag="3D Printing">+ 3D Printing</button>
+          <button type="button" class="chip" data-add-tag="Python">+ Python</button>
+          <button type="button" class="chip" data-add-tag="Web Dev">+ Web Dev</button>
+        </div>
+      </section>
+
+      <div class="row wrap end gap-12" style="padding-top:4px">
+        <button type="button" class="btn btn-ghost btn-lg" id="save-draft">Save draft</button>
+        <a href="project.html" class="btn btn-outline btn-lg">Preview</a>
+        <button type="submit" class="btn btn-primary btn-lg">Publish project</button>
+      </div>
+    </form>
+
+    <aside class="col-side stack gap-20">
+      <section class="card pad-sm stack gap-12" aria-labelledby="chk-h">
+        <h2 id="chk-h" style="font-family:var(--font-body);font-size:16px;font-weight:600;letter-spacing:0">Before you publish</h2>
+        <ul class="checklist">
+          <li data-check="title"><span class="dot"></span>Title added</li>
+          <li data-check="photo"><span class="dot"></span>At least one photo</li>
+          <li data-check="tag"><span class="dot"></span>At least one tag</li>
+          <li data-check="overview"><span class="dot"></span>Overview written</li>
+          <li data-check="desc"><span class="dot"></span>Description written</li>
+        </ul>
+      </section>
+      <section class="info-box row gap-12" style="padding:20px;border-radius:12px;align-items:flex-start">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#13294B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:0 0 auto"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+        <p>Every post is checked for inappropriate language before it goes live. CIT faculty can remove posts that break the Student Code of Conduct.</p>
+      </section>
+    </aside>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

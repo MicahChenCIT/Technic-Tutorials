@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore · Technic Tutorials</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-protected>
+<header class="topbar">
+  <nav aria-label="Main">
+    <a class="brand" href="explore.html">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#13294B"/><path d="M12 10l-5 6 5 6M20 10l5 6-5 6" fill="none" stroke="#A7C7E7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Technic Tutorials
+    </a>
+    <div class="nav-tabs">
+      <a class="nav-tab" href="explore.html" aria-current="page">Explore</a>
+      <a class="nav-tab" href="profile.html">My projects</a>
+      <a class="nav-tab" href="settings.html">Settings</a>
+    </div>
+    <a class="btn btn-primary" href="create.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      New project
+    </a>
+    <a class="avatar nav-avatar" href="profile.html" aria-label="Your profile" data-user-initials>JS</a>
+  </nav>
+</header>
+
+<main class="container" style="padding-top:40px;padding-bottom:64px;display:flex;flex-direction:column;gap:32px">
+
+  <section class="hero">
+    <div class="stack gap-12" style="flex:1 1 420px">
+      <p class="hero-eyebrow">DEEP RUN HS · CENTER FOR INFORMATION TECHNOLOGY</p>
+      <h1>Share what you built.<br>Show how you built it.</h1>
+      <p class="sub">Projects and step-by-step build guides from students across the school.</p>
+    </div>
+    <form class="hero-search" id="hero-search" role="search">
+      <label for="hero-q" class="sr-only">Search projects</label>
+      <input id="hero-q" type="search" placeholder="Search projects, tags or students">
+      <button type="submit" class="btn btn-light">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        Search
+      </button>
+    </form>
+  </section>
+
+  <section id="feed-controls" aria-label="Feed controls" class="row wrap between gap-16" style="scroll-margin-top:16px">
+    <div class="segmented" id="sort-tabs" role="tablist" aria-label="Sort feed">
+      <button class="seg" role="tab" data-value="recent" aria-selected="true" type="button">Recent</button>
+      <button class="seg" role="tab" data-value="popular" aria-selected="false" type="button">Popular</button>
+    </div>
+    <div class="row wrap gap-8" id="tag-chips">
+      <span class="small muted" style="margin-right:4px">Browse by tag:</span>
+      <button type="button" class="chip" data-tag="Arduino" aria-pressed="false">Arduino</button>
+      <button type="button" class="chip" data-tag="Robotics" aria-pressed="false">Robotics</button>
+      <button type="button" class="chip" data-tag="3D Printing" aria-pressed="false">3D Printing</button>
+      <button type="button" class="chip" data-tag="Web Dev" aria-pressed="false">Web Dev</button>
+      <button type="button" class="chip" data-tag="Python" aria-pressed="false">Python</button>
+      <button type="button" class="chip" data-tag="Game Dev" aria-pressed="false">Game Dev</button>
+      <button type="button" class="chip" data-tag="Electronics" aria-pressed="false">Electronics</button>
+      <button type="button" class="chip" data-tag="BCI" aria-pressed="false">BCI</button>
+    </div>
+  </section>
+
+  <p id="feed-status" class="small muted" aria-live="polite" style="margin-top:-16px"></p>
+
+  <section class="card-grid" id="feed" aria-label="Projects"></section>
+
+  <div class="row" style="justify-content:center">
+    <button type="button" class="btn btn-neutral btn-lg" id="load-more">Load more projects</button>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <span>Moderated by CIT faculty · Follows the DRHS Student Code of Conduct</span>
+    <span class="row gap-20"><a href="#">Community guidelines</a><a href="#">Report a problem</a></span>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

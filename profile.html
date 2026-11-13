@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My projects · Technic Tutorials</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-protected>
+<header class="topbar">
+  <nav aria-label="Main">
+    <a class="brand" href="explore.html">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#13294B"/><path d="M12 10l-5 6 5 6M20 10l5 6-5 6" fill="none" stroke="#A7C7E7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Technic Tutorials
+    </a>
+    <div class="nav-tabs">
+      <a class="nav-tab" href="explore.html">Explore</a>
+      <a class="nav-tab" href="profile.html" aria-current="page">My projects</a>
+      <a class="nav-tab" href="settings.html">Settings</a>
+    </div>
+    <a class="btn btn-primary" href="create.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      New project
+    </a>
+    <a class="avatar nav-avatar" href="profile.html" aria-label="Your profile" data-user-initials>JS</a>
+  </nav>
+</header>
+
+<main class="container page" style="gap:28px">
+
+  <section class="profile-head">
+    <span class="avatar" data-user-initials style="width:112px;height:112px;font-family:var(--font-head);font-size:40px;font-weight:700">JS</span>
+    <div class="stack gap-8" style="flex:1 1 320px">
+      <h1 data-user-name>John S.</h1>
+      <p class="muted">[Program] · Class of [year] · Deep Run HS</p>
+      <p style="max-width:560px">[Short bio — what you like to build and what you’re learning next.]</p>
+    </div>
+    <div class="row wrap gap-28">
+      <div><p class="big-num" id="stat-projects">4</p><p class="small muted">projects</p></div>
+      <div><p class="big-num" id="stat-upvotes">112</p><p class="small muted">upvotes received</p></div>
+    </div>
+    <a href="settings.html" class="btn btn-outline">Edit profile</a>
+  </section>
+
+  <section class="stack gap-18" aria-labelledby="proj-h">
+    <div class="row wrap between gap-12">
+      <h2 id="proj-h" style="font-size:24px">Projects by <span data-user-first>John</span></h2>
+      <div class="row gap-8">
+        <label for="psort" class="small muted">Sort</label>
+        <select id="psort" class="select" style="min-height:40px"><option value="newest">Newest</option><option value="upvoted">Most upvoted</option></select>
+      </div>
+    </div>
+    <div class="card-grid" id="my-projects" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))"></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

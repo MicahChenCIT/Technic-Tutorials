@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mind-controlled cursor · Technic Tutorials</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-protected>
+<header class="topbar">
+  <nav aria-label="Main">
+    <a class="brand" href="explore.html">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#13294B"/><path d="M12 10l-5 6 5 6M20 10l5 6-5 6" fill="none" stroke="#A7C7E7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Technic Tutorials
+    </a>
+    <div class="nav-tabs">
+      <a class="nav-tab" href="explore.html">Explore</a>
+      <a class="nav-tab" href="profile.html">My projects</a>
+      <a class="nav-tab" href="settings.html">Settings</a>
+    </div>
+    <a class="btn btn-primary" href="create.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      New project
+    </a>
+    <a class="avatar nav-avatar" href="profile.html" aria-label="Your profile" data-user-initials>JS</a>
+  </nav>
+</header>
+
+<main class="container" style="padding-top:28px;padding-bottom:72px;display:flex;flex-direction:column;gap:24px">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="explore.html">Explore</a><span aria-hidden="true">/</span>
+    <a href="explore.html">BCI</a><span aria-hidden="true">/</span>
+    <span>Mind-controlled cursor</span>
+  </nav>
+
+  <div class="two-col">
+    <article class="col-main stack gap-28">
+
+      <header class="stack gap-14">
+        <div class="row wrap gap-6">
+          <a class="tag tag-lg" href="explore.html">BCI</a>
+          <a class="tag tag-lg" href="explore.html">Python</a>
+          <a class="tag tag-lg" href="explore.html">Electronics</a>
+        </div>
+        <h1 class="post-title">Mind-controlled cursor with an EEG headset</h1>
+        <div class="row wrap gap-12 muted" style="font-size:15px">
+          <a href="profile.html" class="row gap-10" style="text-decoration:none;color:var(--navy);font-weight:600">
+            <span class="avatar" style="width:40px;height:40px;font-size:14px">JS</span>John S.
+          </a>
+          <span aria-hidden="true">·</span><span>Posted Oct 30</span>
+          <span aria-hidden="true">·</span><span>6 build steps</span>
+        </div>
+      </header>
+
+      <section class="stack gap-10" aria-label="Photos">
+        <div class="gallery-main photo-ph">
+          <span id="gallery-label">project photo 1 of 6</span>
+          <span class="gallery-count" id="gallery-count">1 / 6</span>
+        </div>
+        <div class="thumbs">
+          <button class="thumb" aria-label="Photo 1" aria-current="true"></button>
+          <button class="thumb" aria-label="Photo 2"></button>
+          <button class="thumb" aria-label="Photo 3"></button>
+          <button class="thumb" aria-label="Photo 4"></button>
+          <button class="thumb" aria-label="Photo 5"></button>
+          <button class="thumb" aria-label="Photo 6"></button>
+        </div>
+      </section>
+
+      <section class="card" style="padding:20px 24px" aria-label="Overview">
+        <p class="mono muted" style="font-size:12px;margin-bottom:4px">OVERVIEW</p>
+        <p style="font-size:18px">Move your mouse just by concentrating. A low-cost EEG headband, Python signal filtering and a quick calibration step.</p>
+      </section>
+
+      <section class="stack gap-14" aria-label="Reactions">
+        <div class="reactions-bar">
+          <button class="upvote" id="upvote" aria-pressed="false" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            <span class="label">Upvote · 48</span>
+          </button>
+          <span class="vdiv" aria-hidden="true"></span>
+          <button class="reaction" type="button" aria-pressed="true" data-count="10">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>
+            Inspiring <span class="count">10</span>
+          </button>
+          <button class="reaction" type="button" aria-pressed="false" data-count="14">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.2.9-4.5 4.3 1.1 6.1L12 17l-5.5 2.9 1.1-6.1L3.1 9.5l6.2-.9z"/></svg>
+            Impressive <span class="count">14</span>
+          </button>
+          <button class="reaction" type="button" aria-pressed="false" data-count="6">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+            Want to build <span class="count">6</span>
+          </button>
+          <button class="reaction" type="button" aria-pressed="false" data-count="11">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>
+            Helpful <span class="count">11</span>
+          </button>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost" id="report-btn" type="button" data-report-toggle aria-expanded="false" aria-controls="report-panel">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4h11l-1.5 4L16 12H5"/></svg>
+            Report
+          </button>
+        </div>
+
+        <div class="card pad-sm stack gap-14" id="report-panel" hidden>
+          <fieldset style="border:0;margin:0;padding:0" class="stack gap-8">
+            <legend style="font-weight:600;font-size:17px;margin-bottom:8px">What’s wrong with this post?</legend>
+            <label class="check"><input type="radio" name="reason">Inappropriate language or images</label>
+            <label class="check"><input type="radio" name="reason">Unsafe instructions</label>
+            <label class="check"><input type="radio" name="reason">Bullying or targeting a student</label>
+            <label class="check"><input type="radio" name="reason">Copied someone else’s work</label>
+            <label class="check"><input type="radio" name="reason">Something else</label>
+          </fieldset>
+          <p class="small muted">Reports go to CIT faculty moderators. The author isn’t told who reported it.</p>
+          <div class="row wrap gap-10">
+            <button type="button" class="btn btn-primary" id="send-report">Send report</button>
+            <button type="button" class="btn btn-neutral" data-report-toggle>Cancel</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="stack gap-12" aria-labelledby="about-h">
+        <h2 id="about-h" style="font-size:26px">About this project</h2>
+        <p>Last year I saw a demo of someone controlling their computer through concentration alone and wanted to build my own. It took me months to piece together — so here’s the blueprint I wish I’d had. The headset streams brainwave data over Bluetooth, a Python script filters out noise, and a simple threshold turns focus into cursor movement.</p>
+        <h3 style="font-family:var(--font-body);font-size:18px;font-weight:600;letter-spacing:0;margin-top:8px">What you’ll need</h3>
+        <ul style="margin:0;padding-left:22px" class="stack gap-4">
+          <li>[EEG headset model] with Bluetooth</li>
+          <li>A laptop running Python 3</li>
+          <li>Python libraries: [list of libraries]</li>
+        </ul>
+      </section>
+
+      <section class="stack gap-16" aria-labelledby="steps-h">
+        <div class="row wrap between gap-12" style="align-items:baseline">
+          <h2 id="steps-h" style="font-size:26px">Build steps</h2>
+          <span class="small muted">6 steps</span>
+        </div>
+        <ol style="list-style:none;margin:0;padding:0" class="stack gap-14">
+          <li class="card pad-sm step-card"><span class="step-num">01</span><div class="stack gap-8" style="flex:1;min-width:0"><h3 style="font-family:var(--font-body);font-size:18px;font-weight:600;letter-spacing:0">Pair the headset</h3><p style="color:var(--text-alt)">Charge the headset, turn on Bluetooth pairing mode and connect it to your laptop. Check that the signal-quality light turns solid.</p><div class="step-photo photo-ph">step photo</div></div></li>
+          <li class="card pad-sm step-card"><span class="step-num">02</span><div class="stack gap-8" style="flex:1;min-width:0"><h3 style="font-family:var(--font-body);font-size:18px;font-weight:600;letter-spacing:0">Install the Python libraries</h3><p style="color:var(--text-alt)">Create a virtual environment and install the libraries listed above. Run the test script to confirm data is streaming.</p></div></li>
+          <li class="card pad-sm step-card"><span class="step-num">03</span><div class="stack gap-8" style="flex:1;min-width:0"><h3 style="font-family:var(--font-body);font-size:18px;font-weight:600;letter-spacing:0">Filter the raw signal</h3><p style="color:var(--text-alt)">Apply a band-pass filter to keep the frequency range linked to focus, then average it over a short window to smooth out spikes.</p><div class="step-photo photo-ph">step photo</div></div></li>
+          <li class="card pad-sm step-card"><span class="step-num">04</span><div class="stack gap-8" style="flex:1;min-width:0"><h3 style="font-family:var(--font-body);font-size:18px;font-weight:600;letter-spacing:0">Calibrate your baseline</h3><p style="color:var(--text-alt)">Record 30 seconds relaxed and 30 seconds concentrating. The script saves a personal threshold halfway between the two.</p></div></li>
+          <li class="card pad-sm step-card"><span class="step-num">05</span><div class="stack gap-8" style="flex:1;min-width:0"><h3 style="font-family:var(--font-body);font-size:18px;font-weight:600;letter-spacing:0">Map focus to the cursor</h3><p style="color:var(--text-alt)">When the focus value stays above your threshold, move the cursor in the current direction. Blink twice to switch direction.</p></div></li>
+          <li class="card pad-sm step-card"><span class="step-num">06</span><div class="stack gap-8" style="flex:1;min-width:0"><h3 style="font-family:var(--font-body);font-size:18px;font-weight:600;letter-spacing:0">Tune and test</h3><p style="color:var(--text-alt)">Adjust the threshold and smoothing window until movement feels controlled. Try it in a simple click-the-target game.</p><div class="step-photo photo-ph">step photo</div></div></li>
+        </ol>
+      </section>
+
+      <section class="stack gap-16" aria-labelledby="comments-h">
+        <h2 id="comments-h" style="font-size:26px">Comments <span id="comment-count" style="font-size:18px;color:var(--text-2);font-weight:500">12</span></h2>
+        <form class="card stack gap-10" style="padding:16px" id="comment-form">
+          <label for="cmt" class="label" style="font-size:15px">Add a comment</label>
+          <textarea id="cmt" name="comment" rows="3" class="textarea" placeholder="Congratulate, ask a question, or share how you’d build on it"></textarea>
+          <div class="row wrap between gap-10">
+            <span class="tiny muted row gap-6"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>Comments are checked by a language filter before they post.</span>
+            <button type="submit" class="btn btn-primary">Post comment</button>
+          </div>
+        </form>
+
+        <div id="comment-list">
+          <div class="comment">
+            <span class="avatar avatar-light" style="width:38px;height:38px;font-size:13px">SM</span>
+            <div class="stack gap-4" style="flex:1 1 auto;min-width:0">
+              <div class="row wrap gap-8 small" style="align-items:baseline"><a href="profile.html" style="font-weight:600;color:var(--navy);text-decoration:none">Saifi M.</a><span class="muted">2 days ago</span></div>
+              <p>This is amazing! Did you try using it to type, or just move the cursor?</p>
+              <div class="row gap-16 actions"><button type="button">Reply</button><button type="button">Report</button></div>
+            </div>
+          </div>
+          <div class="comment">
+            <span class="avatar avatar-light" style="width:38px;height:38px;font-size:13px">MG</span>
+            <div class="stack gap-4" style="flex:1 1 auto;min-width:0">
+              <div class="row wrap gap-8 small" style="align-items:baseline"><a href="profile.html" style="font-weight:600;color:var(--navy);text-decoration:none">Mou G.</a><span class="muted">2 days ago</span></div>
+              <p>The calibration step is really clear. I want to try this with our robotics arm.</p>
+              <div class="row gap-16 actions"><button type="button">Reply</button><button type="button">Report</button></div>
+            </div>
+          </div>
+          <div class="comment">
+            <span class="avatar avatar-light" style="width:38px;height:38px;font-size:13px">MC</span>
+            <div class="stack gap-4" style="flex:1 1 auto;min-width:0">
+              <div class="row wrap gap-8 small" style="align-items:baseline"><a href="profile.html" style="font-weight:600;color:var(--navy);text-decoration:none">Micah C.</a><span class="muted">1 day ago</span></div>
+              <p>Congrats — how long did step 3 take you to get right?</p>
+              <div class="row gap-16 actions"><button type="button">Reply</button><button type="button">Report</button></div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-neutral" id="show-all" style="align-self:flex-start" data-toast="All comments are showing.">Show all 12 comments</button>
+      </section>
+    </article>
+
+    <aside class="col-side stack gap-20" style="flex-basis:300px">
+      <section class="card pad-sm stack gap-14" aria-label="Author">
+        <div class="row gap-12">
+          <span class="avatar" style="width:52px;height:52px;font-size:17px">JS</span>
+          <div><p style="font-weight:600;font-size:17px">John S.</p><p class="small muted">[Program] · Class of [year]</p></div>
+        </div>
+        <p class="small muted">4 projects · 112 upvotes received</p>
+        <a href="profile.html" class="btn btn-outline btn-block">View all projects</a>
+      </section>
+      <section class="card pad-sm stack gap-12" aria-labelledby="more-h">
+        <h2 id="more-h" style="font-family:var(--font-body);font-size:16px;font-weight:600;letter-spacing:0">More with these tags</h2>
+        <a class="more-link" href="project.html"><span class="more-thumb"></span><span class="small" style="font-weight:500;line-height:1.35">Raspberry Pi weather dashboard</span></a>
+        <a class="more-link" href="project.html"><span class="more-thumb"></span><span class="small" style="font-weight:500;line-height:1.35">Flashcard quiz app in Python</span></a>
+        <a class="more-link" href="project.html"><span class="more-thumb"></span><span class="small" style="font-weight:500;line-height:1.35">LED matrix scoreboard</span></a>
+      </section>
+    </aside>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

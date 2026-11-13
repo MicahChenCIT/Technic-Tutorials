@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings · Technic Tutorials</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-protected>
+<header class="topbar">
+  <nav aria-label="Main">
+    <a class="brand" href="explore.html">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#13294B"/><path d="M12 10l-5 6 5 6M20 10l5 6-5 6" fill="none" stroke="#A7C7E7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Technic Tutorials
+    </a>
+    <div class="nav-tabs">
+      <a class="nav-tab" href="explore.html">Explore</a>
+      <a class="nav-tab" href="profile.html">My projects</a>
+      <a class="nav-tab" href="settings.html" aria-current="page">Settings</a>
+    </div>
+    <a class="btn btn-primary" href="create.html">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      New project
+    </a>
+    <a class="avatar nav-avatar" href="profile.html" aria-label="Your profile" data-user-initials>JS</a>
+  </nav>
+</header>
+
+<main class="container page">
+  <h1 class="page-title">Settings</h1>
+
+  <div class="two-col">
+    <nav class="settings-nav" id="settings-nav" aria-label="Settings sections">
+      <a href="#profile" class="is-active">Profile</a>
+      <a href="#account">Account &amp; password</a>
+      <a href="#notifications">Notifications</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#display">Display</a>
+    </nav>
+
+    <div class="settings-body">
+
+      <!-- Profile -->
+      <section id="profile" class="card pad stack gap-18 settings-card" aria-labelledby="h-profile">
+        <h2 id="h-profile">Profile</h2>
+        <div class="row wrap gap-16">
+          <span class="avatar" data-user-initials style="width:72px;height:72px;font-family:var(--font-head);font-size:26px;font-weight:700">JS</span>
+          <button type="button" class="btn btn-outline" data-toast="Photo uploads are coming soon.">Change photo</button>
+          <button type="button" class="btn btn-ghost" data-toast="Using your initials.">Use initials</button>
+        </div>
+        <div class="grid-3">
+          <div class="field">
+            <label class="label" style="font-size:15px" for="st-name">Display name</label>
+            <input class="input" id="st-name" type="text" value="John S.">
+          </div>
+          <div class="field">
+            <label class="label" style="font-size:15px" for="st-prog">Program</label>
+            <select class="select" id="st-prog"><option>[CIT program]</option><option>Not in the CIT</option></select>
+          </div>
+          <div class="field">
+            <label class="label" style="font-size:15px" for="st-year">Graduation year</label>
+            <select class="select" id="st-year"><option>2027</option><option>2028</option><option>2029</option><option>2030</option></select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" style="font-size:15px" for="st-bio">Bio</label>
+          <textarea class="textarea" id="st-bio" rows="3" maxlength="160" placeholder="What you like to build and what you’re learning next"></textarea>
+          <span class="helper">Up to 160 characters. Checked by the language filter.</span>
+        </div>
+        <div class="row end"><button type="button" class="btn btn-primary btn-lg" id="save-profile">Save profile</button></div>
+      </section>
+
+      <!-- Account -->
+      <section id="account" class="card pad stack gap-18 settings-card" aria-labelledby="h-account">
+        <h2 id="h-account">Account &amp; password</h2>
+        <div class="field">
+          <label class="label" style="font-size:15px" for="st-email">School email</label>
+          <input class="input" id="st-email" type="email" value="[student ID]@[school domain]" readonly data-user-email>
+          <span class="helper">Your account is tied to your school email and can’t be changed here.</span>
+        </div>
+        <div class="grid-3">
+          <div class="field"><label class="label" style="font-size:15px" for="st-pw0">Current password</label><input class="input" id="st-pw0" type="password" autocomplete="current-password"></div>
+          <div class="field"><label class="label" style="font-size:15px" for="st-pw1">New password</label><input class="input" id="st-pw1" type="password" autocomplete="new-password"></div>
+          <div class="field"><label class="label" style="font-size:15px" for="st-pw2">Confirm new password</label><input class="input" id="st-pw2" type="password" autocomplete="new-password"></div>
+        </div>
+        <div class="row wrap between gap-12">
+          <a href="index.html" data-signout style="font-weight:600">Sign out of all devices</a>
+          <button type="button" class="btn btn-light btn-lg" id="update-pw">Update password</button>
+        </div>
+      </section>
+
+      <!-- Notifications -->
+      <section id="notifications" class="card pad stack gap-6 settings-card" aria-labelledby="h-notif">
+        <h2 id="h-notif" style="margin-bottom:10px">Notifications</h2>
+        <div class="notif-row"><div class="stack"><span style="font-weight:600">Comments on my projects</span><span class="small muted">When someone comments on a project you posted.</span></div><button class="switch" role="switch" aria-checked="true" data-key="comments" aria-label="Comments on my projects"></button></div>
+        <div class="notif-row"><div class="stack"><span style="font-weight:600">Replies to my comments</span><span class="small muted">When someone answers a question you asked.</span></div><button class="switch" role="switch" aria-checked="true" data-key="replies" aria-label="Replies to my comments"></button></div>
+        <div class="notif-row"><div class="stack"><span style="font-weight:600">Reactions</span><span class="small muted">When someone reacts to your project.</span></div><button class="switch" role="switch" aria-checked="true" data-key="reactions" aria-label="Reactions"></button></div>
+        <div class="notif-row"><div class="stack"><span style="font-weight:600">Upvotes</span><span class="small muted">Each time your project gets an upvote.</span></div><button class="switch" role="switch" aria-checked="false" data-key="upvotes" aria-label="Upvotes"></button></div>
+        <div class="notif-row"><div class="stack"><span style="font-weight:600">Messages from moderators</span><span class="small muted">Notices about your posts from CIT faculty. Always emailed too.</span></div><button class="switch" role="switch" aria-checked="true" data-key="faculty" aria-label="Messages from moderators"></button></div>
+        <div class="notif-row">
+          <label for="st-digest" style="font-weight:600">Email me a summary</label>
+          <select class="select" id="st-digest" style="min-height:44px"><option>Weekly</option><option>Daily</option><option>Never</option></select>
+        </div>
+      </section>
+
+      <!-- Privacy -->
+      <section id="privacy" class="card pad stack gap-14 settings-card" aria-labelledby="h-priv">
+        <h2 id="h-priv">Privacy</h2>
+        <fieldset style="border:0;margin:0;padding:0" class="stack gap-8">
+          <legend style="font-weight:600;margin-bottom:8px">Who can see my profile and projects</legend>
+          <label class="check"><input type="radio" name="vis" checked>All signed-in Deep Run students</label>
+          <label class="check"><input type="radio" name="vis">CIT students only</label>
+        </fieldset>
+        <label class="check"><input type="checkbox" checked>Let others comment on my projects</label>
+        <label class="check"><input type="checkbox">Hide my total upvotes on my profile</label>
+        <p class="info-box">CIT faculty moderators can always see posts and comments, whatever you choose here.</p>
+      </section>
+
+      <!-- Display -->
+      <section id="display" class="card pad stack gap-14 settings-card" aria-labelledby="h-disp">
+        <h2 id="h-disp">Display</h2>
+        <fieldset style="border:0;margin:0;padding:0" class="row wrap gap-10">
+          <legend style="font-weight:600;margin-bottom:10px">Theme</legend>
+          <label class="theme-option"><input type="radio" name="theme" checked>Light</label>
+          <label class="theme-option"><input type="radio" name="theme">Dark</label>
+          <label class="theme-option"><input type="radio" name="theme">Match my device</label>
+        </fieldset>
+        <label class="check"><input type="checkbox">Larger text</label>
+        <label class="check"><input type="checkbox">Reduce motion</label>
+      </section>
+
+      <div><a href="index.html" class="btn btn-outline btn-lg" data-signout>Sign out</a></div>
+    </div>
+  </div>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

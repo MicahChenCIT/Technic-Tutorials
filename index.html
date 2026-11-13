@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in · Technic Tutorials</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-auth-page>
+<main class="auth">
+
+  <!-- LEFT: brand panel -->
+  <section class="auth-panel">
+    <div class="row gap-12">
+      <svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#F8F3E8"/><path d="M12 10l-5 6 5 6M20 10l5 6-5 6" fill="none" stroke="#13294B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span style="font-family:var(--font-head);font-weight:700;font-size:24px">Technic Tutorials</span>
+    </div>
+
+    <div class="stack gap-20" style="max-width:520px">
+      <h1>The build guides you wish you’d had.</h1>
+      <p class="sub">Deep Run students sharing real projects — and exactly how to make them.</p>
+      <ul class="auth-list">
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7C7E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Post your projects with photos and step-by-step instructions</li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7C7E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Find inspiration by tag, title or classmate</li>
+        <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A7C7E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>Upvote, react and ask questions — positive only</li>
+      </ul>
+    </div>
+
+    <p class="auth-caption">DEEP RUN HS · CIT · MODERATED BY FACULTY</p>
+  </section>
+
+  <!-- RIGHT: form card -->
+  <section class="auth-side">
+    <div class="auth-card">
+
+      <div class="segmented full" id="auth-tabs" role="tablist" aria-label="Account">
+        <button class="seg" role="tab" data-value="signin" aria-selected="true" type="button">Sign in</button>
+        <button class="seg" role="tab" data-value="signup" aria-selected="false" type="button">Create account</button>
+      </div>
+
+      <!-- Sign in -->
+      <form class="auth-form" id="signin-form" novalidate>
+        <h2>Welcome back</h2>
+        <p class="error" id="si-form-err" role="alert"></p>
+        <div class="field">
+          <label class="label" for="si-email">School email</label>
+          <input class="input" id="si-email" name="email" type="email" autocomplete="email" placeholder="[student ID]@[school domain]">
+          <span class="error" id="si-email-err"></span>
+        </div>
+        <div class="field">
+          <div class="row between" style="align-items:baseline">
+            <label class="label" for="si-pw">Password</label>
+            <a href="#" class="small" data-toast="Ask a CIT teacher to reset your password.">Forgot password?</a>
+          </div>
+          <div class="row gap-8">
+            <input class="input" id="si-pw" name="password" type="password" autocomplete="current-password" style="flex:1 1 auto;min-width:0">
+            <button type="button" class="btn btn-ghost" data-toggle-pw="si-pw" aria-pressed="false">Show</button>
+          </div>
+          <span class="error" id="si-pw-err"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+        <p class="small muted" style="text-align:center">New here? <a href="#signup" data-switch-mode="signup">Create an account</a></p>
+      </form>
+
+      <!-- Create account -->
+      <form class="auth-form" id="signup-form" novalidate hidden>
+        <h2>Join the community</h2>
+        <div class="field">
+          <label class="label" for="su-name">Display name</label>
+          <input class="input" id="su-name" name="name" type="text" autocomplete="name" placeholder="First name and last initial">
+          <span class="error" id="su-name-err"></span>
+        </div>
+        <div class="field">
+          <label class="label" for="su-email">School email</label>
+          <input class="input" id="su-email" name="email" type="email" autocomplete="email" placeholder="[student ID]@[school domain]">
+          <span class="helper">Only school email addresses can sign up.</span>
+          <span class="error" id="su-email-err"></span>
+        </div>
+        <div class="field">
+          <label class="label" for="su-pw">Password</label>
+          <div class="row gap-8">
+            <input class="input" id="su-pw" name="password" type="password" autocomplete="new-password" style="flex:1 1 auto;min-width:0">
+            <button type="button" class="btn btn-ghost" data-toggle-pw="su-pw" aria-pressed="false">Show</button>
+          </div>
+          <span class="helper">At least 8 characters.</span>
+          <span class="error" id="su-pw-err"></span>
+        </div>
+        <label class="check small" style="align-items:flex-start">
+          <input type="checkbox" name="coc" style="margin-top:2px">
+          <span>I’ll follow the Student Code of Conduct and the <a href="#">community guidelines</a>. I understand faculty can see and remove my posts and comments.</span>
+        </label>
+        <span class="error" id="su-coc-err"></span>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Create account</button>
+        <p class="small muted" style="text-align:center">Already have an account? <a href="#" data-switch-mode="signin">Sign in</a></p>
+      </form>
+
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
