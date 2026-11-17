@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My projects · Technic Tutorials</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body data-protected>
+<header class="topbar">
+  <nav aria-label="Main">
+    <a class="brand" href="../home/">
+      <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#13294B"/><path d="M12 10l-5 6 5 6M20 10l5 6-5 6" fill="none" stroke="#A7C7E7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Technic Tutorials
+    </a>
+    <div class="nav-tabs">
+      <a class="nav-tab" href="../home/">Explore</a>
+      <a class="nav-tab" href="../profile/" aria-current="page">My projects</a>
+      <a class="nav-tab" href="../settings/">Settings</a>
+    </div>
+    <a class="btn btn-primary" href="../create/">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      New project
+    </a>
+    <a class="avatar nav-avatar" href="../profile/" aria-label="Your profile" data-user-initials>{{ user_inital }}</a>
+  </nav>
+</header>
+
+<main class="container page" style="gap:28px">
+
+  <section class="profile-head">
+    <span class="avatar" data-user-initials style="width:112px;height:112px;font-family:var(--font-head);font-size:40px;font-weight:700">JS</span>
+    <div class="stack gap-8" style="flex:1 1 320px">
+      <h1 data-user-name>{{ user_full }}</h1>
+      <p class="muted">{{ program }} · Class of {{ year }} · Deep Run HS</p>
+      <p style="max-width:560px">{{ bio }}</p>
+    </div>
+    <div class="row wrap gap-28">
+      <div><p class="big-num" id="stat-projects">{{ num_projects }}</p><p class="small muted">projects</p></div>
+      <div><p class="big-num" id="stat-upvotes">{{ num_upvotes }}</p><p class="small muted">upvotes received</p></div>
+    </div>
+    <a href="../settings/" class="btn btn-outline">Edit profile</a>
+  </section>
+
+  <section class="stack gap-18" aria-labelledby="proj-h">
+    <div class="row wrap between gap-12">
+      <h2 id="proj-h" style="font-size:24px">Projects by <span data-user-first>{{ user_first }}</span></h2>
+      <div class="row gap-8">
+        <label for="psort" class="small muted">Sort</label>
+        <a href=# id=1><button class="select" "style="min-height:40px">Newest</button></a>
+        <a href=# id=1><button class="select" "style="min-height:40px">Popular</button></a>
+      </div>
+    </div>
+    <div class="card-grid" id="my-projects" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))"></div>
+  </section>
+</main>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('a#1').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/home/button_process/1',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+<script type=text/javascript>
+        $(function() {
+          $('a#2').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/home/button_process/2',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+</body>
+</html>
