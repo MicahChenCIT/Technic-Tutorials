@@ -37,6 +37,34 @@
         <a href="../signin/" class="seg" role="tab" data-value="signin" aria-selected="false" type="button">Sign in</a>
         <a href="../signup/" class="seg" role="tab" data-value="signup" aria-selected="true" type="button">Create account</a>
       </div>
+      <style>
+  /* Centers the tab container */
+  #auth-tabs,
+  .segmented {
+    display: flex;
+    width: 100%;
+  }
+
+  /* Centers text inside each button and removes underlines */
+  #auth-tabs .seg,
+  #auth-tabs a {
+    display: flex !important;
+    justify-content: center !important; /* Centers text horizontally */
+    align-items: center !important;     /* Centers text vertically */
+    text-align: center !important;
+    text-decoration: none !important;   /* Removes text underline */
+    border-bottom: none !important;     /* Removes bottom borders */
+    box-shadow: none !important;        /* Removes active line shadows */
+  }
+
+  /* Keeps underlines hidden on hover and active states */
+  #auth-tabs a:hover,
+  #auth-tabs a.active,
+  #auth-tabs a[aria-selected="true"] {
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+  </style>
 
       <!-- Create account -->
       <form method="post" class="auth-form" id="signup-form" novalidate>
