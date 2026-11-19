@@ -53,7 +53,7 @@
       <section class="card pad stack gap-16">
         <div class="row wrap between gap-12" style="align-items:baseline">
           <h2 class="sec-title"><span class="sec-num" aria-hidden="true">02</span>Photos</h2>
-          <span class="small muted" id="photo-count">3 of 10 · the first photo is the cover</span>
+          <span class="small muted" id="photo-count">Insert your Photos!</span>
         </div>
         <div class="photo-grid" id="photo-grid">
           <a href=# id=1><button type="button" class="add-tile" id="add-photo">
@@ -80,53 +80,103 @@
         </div>
       </section>
 
-      <!-- 04 Build steps -->
-      <section class="card pad stack gap-16">
-        <div class="row wrap between gap-12">
-          <h2 class="sec-title"><span class="sec-num" aria-hidden="true">04</span>Build steps <span class="small muted" style="font-family:var(--font-body);font-weight:500;letter-spacing:0">optional</span></h2>
-          <label class="check" style="font-weight:500"><input type="checkbox" id="steps-toggle" checked>Include step-by-step instructions</label>
-        </div>
-        <div class="stack gap-12" id="steps-wrap">
-          <div class="stack gap-12" id="step-list">
-            <div class="step-edit">
-              <span class="step-num">01</span>
-              <div class="stack gap-10" style="flex:1 1 auto;min-width:0">
-                <input class="input" type="text" value="Print the parts" aria-label="Step title" style="min-height:44px;font-weight:600">
-                <textarea class="textarea" rows="2" aria-label="Step instructions">Print the chassis and wheel hubs in PLA at 20% infill. Supports only for the sensor mount.</textarea>
-                <div class="row wrap gap-12">
-                  <a href=# id=8><button type="button" class="dashed-btn" data-step-image>+ Add image to step</button></a>
-                  <a href=# id=9><button type="button" class="btn btn-ghost" data-remove-step>Remove step</button></a>
-                </div>
-              </div>
-            </div>
-            <div class="step-edit">
-              <span class="step-num">02</span>
-              <div class="stack gap-10" style="flex:1 1 auto;min-width:0">
-                <input class="input" type="text" placeholder="Step title" aria-label="Step title" style="min-height:44px;font-weight:600">
-                <textarea class="textarea" rows="2" placeholder="What to do in this step" aria-label="Step instructions"></textarea>
-                <div class="row wrap gap-12">
-                  <a href=# id=10><button type="button" class="dashed-btn" data-step-image>+ Add image to step</button></a>
-                  <a href=# id=11><button type="button" class="btn btn-ghost" data-remove-step>Remove step</button></a>
-                </div>
-              </div>
+
+  <!-- 04 Build steps -->
+  <section class="card pad stack gap-16">
+    <div class="row wrap between gap-12">
+      <h2 class="sec-title"><span class="sec-num" aria-hidden="true">04</span>Build steps <span class="small muted" style="font-family:var(--font-body);font-weight:500;letter-spacing:0">optional</span></h2>
+      <label class="check" style="font-weight:500"><input type="checkbox" id="steps-toggle" checked>Include step-by-step instructions</label>
+    </div>
+    <div class="stack gap-12" id="steps-wrap">
+      <div class="stack gap-12" id="step-list">
+        <div class="step-edit">
+          <span class="step-num">01</span>
+          <div class="stack gap-10" style="flex:1 1 auto;min-width:0">
+            <input class="input" type="text" value="Print the parts" aria-label="Step title" style="min-height:44px;font-weight:600">
+            <textarea class="textarea" rows="2" aria-label="Step instructions">Print the chassis and wheel hubs in PLA at 20% infill. Supports only for the sensor mount.</textarea>
+            <div class="row wrap gap-12">
+              <button type="button" class="dashed-btn" data-step-image>+ Add image to step</button>
+              <button type="button" class="btn btn-ghost" data-remove-step>Remove step</button>
             </div>
           </div>
-          <a href=# id=12><button type="button" class="btn btn-outline" id="add-step" style="align-self:flex-start">+ Add step</button></a>
         </div>
-        <template id="step-template">
-          <div class="step-edit">
-            <span class="step-num">00</span>
-            <div class="stack gap-10" style="flex:1 1 auto;min-width:0">
-              <input class="input" type="text" placeholder="Step title" aria-label="Step title" style="min-height:44px;font-weight:600">
-              <textarea class="textarea" rows="2" placeholder="What to do in this step" aria-label="Step instructions"></textarea>
-              <div class="row wrap gap-12">
-                <a href=# id=13><button type="button" class="dashed-btn" data-step-image>+ Add image to step</button></a>
-                <a href=# id=14><button type="button" class="btn btn-ghost" data-remove-step>Remove step</button></a>
-              </div>
+        <div class="step-edit">
+          <span class="step-num">02</span>
+          <div class="stack gap-10" style="flex:1 1 auto;min-width:0">
+            <input class="input" type="text" placeholder="Step title" aria-label="Step title" style="min-height:44px;font-weight:600">
+            <textarea class="textarea" rows="2" placeholder="What to do in this step" aria-label="Step instructions"></textarea>
+            <div class="row wrap gap-12">
+              <button type="button" class="dashed-btn" data-step-image>+ Add image to step</button>
+              <button type="button" class="btn btn-ghost" data-remove-step>Remove step</button>
             </div>
           </div>
-        </template>
-      </section>
+        </div>
+      </div>
+      <button type="button" class="btn btn-outline" id="add-step" style="align-self:flex-start">+ Add step</button>
+    </div>
+
+    <!-- Step Template used by JavaScript to clone new steps -->
+    <template id="step-template">
+      <div class="step-edit">
+        <span class="step-num">00</span>
+        <div class="stack gap-10" style="flex:1 1 auto;min-width:0">
+          <input class="input" type="text" placeholder="Step title" aria-label="Step title" style="min-height:44px;font-weight:600">
+          <textarea class="textarea" rows="2" placeholder="What to do in this step" aria-label="Step instructions"></textarea>
+          <div class="row wrap gap-12">
+            <button type="button" class="dashed-btn" data-step-image>+ Add image to step</button>
+            <button type="button" class="btn btn-ghost" data-remove-step>Remove step</button>
+          </div>
+        </div>
+      </div>
+    </template>
+  </section>
+
+  <!-- 05 Tags -->
+  <section class="card pad stack gap-12">
+    <h2 class="sec-title"><span class="sec-num" aria-hidden="true">05</span>Tags <span class="req" style="font-size:16px">*</span></h2>
+    ...
+  </section>
+
+<!-- PASTE THE SCRIPT TAG BEFORE THE CLOSING </script> OR AT THE BOTTOM OF create.html -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const addStepBtn = document.getElementById('add-step');
+  const stepList = document.getElementById('step-list');
+  const stepTemplate = document.getElementById('step-template');
+
+  function updateStepNumbers() {
+    const steps = stepList.querySelectorAll('.step-edit');
+    steps.forEach((step, index) => {
+      const stepNumSpan = step.querySelector('.step-num');
+      if (stepNumSpan) {
+        stepNumSpan.textContent = String(index + 1).padStart(2, '0');
+      }
+    });
+  }
+
+  if (addStepBtn && stepTemplate && stepList) {
+    addStepBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const clone = stepTemplate.content.cloneNode(true);
+      stepList.appendChild(clone);
+      updateStepNumbers();
+    });
+  }
+
+  stepList.addEventListener('click', (e) => {
+    if (e.target.closest('[data-remove-step]')) {
+      e.preventDefault();
+      const stepEdit = e.target.closest('.step-edit');
+      if (stepEdit) {
+        stepEdit.remove();
+        updateStepNumbers();
+      }
+    }
+  });
+});
+</script>
+
+
 
       <!-- 05 Tags -->
       <section class="card pad stack gap-12">
